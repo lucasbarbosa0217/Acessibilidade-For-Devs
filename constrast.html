@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="styleindex.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body aria-hidden="false" id="body">
+    <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal          </a>
+
+    <header>
+
+        <h1 class="title">Acessibilidade<br><b lang="en">for devs</b></h1>
+      
+
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="content.html?id=6">O que é acessibilidade na Web</a></li>
+            <li><a href="content.html?id=1">Boas Práticas</a></li>
+        </ul>
+    </nav>
+    <section class="container" id="main">
+        <div class="box">
+        <div class="inputbox input_color_foreground">  
+            <label for="foregroundcolor" ><h2>Cor da fonte</h2></label>
+            <input type="color" name="" id="foregroundcolor" value="#ffffff"   >
+        </div>
+        <div class="inputbox input_color_background"> 
+            <label for="backgroundcolor" ><h2>Cor do fundo</h2></label> 
+            <input type="color" name="" id="backgroundcolor">
+        </div>
+        </div>
+        <div class="text_test" id="text_test">
+            <p id="text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p id="textLarge"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <section class="box2">
+
+       <div class="ratio_text"><p>Razão de constraste:<h2 id="ratio">21</h1></p></div> 
+        
+        <div class="certificates_box">
+            <div class="certificate" id="certi_aa_small"><p class="title_nivel">Nível AA <br>Small Text <br><b id="Test_AAsmall">Passou</b></p></div>
+            <div class="certificate" id="certi_aa_large"><p class="title_nivel">Nível AA <br>Large Text <br><b id="Test_AAlarge">Passou</b></p></div>
+            <div class="certificate" id="certi_aaa_small"><p class="title_nivel">Nível AAA<br> Small Text <br><b id="Test_AAAsmall">Passou</b></p></div>
+            <div class="certificate" id="certi_aaa_large"><p class="title_nivel">Nível AAA<br> Large Text <br><b id="Test_AAAlarge">Passou</b></p></div>
+        </div>
+        </section>
+        <a href="content.html?id=5">Ler mais sobre constraste</a>
+    </section>
+</body>
+<script src="script.js" type="text/javascript"></script>
+<script src="darkmode.js"></script>
+
+</html>
