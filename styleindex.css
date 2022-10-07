@@ -9,6 +9,9 @@ body,html, *{
     justify-content: flex-start;
   }
 
+  #logo{text-decoration: none; color: black;}
+
+  
 
 .titleSection{
     font-size: 3rem;
