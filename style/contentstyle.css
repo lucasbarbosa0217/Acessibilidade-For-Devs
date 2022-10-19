@@ -1,18 +1,30 @@
-header{
-    width: 35vw;
+.nav{
+    width: 20vw;
     max-width: 500px;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 100%;
+    max-height: 100%;
     border-right: 1px solid black;
     overflow-y: auto;
+    background-color: #FFFFFF;
 } 
 
-header a{
+nav a{
     display: block;
     text-align: center;
     padding: 1rem;
     
     border-bottom: 1px solid black;
+}
+
+#subtitulos-box{
+    padding:0.5rem 2rem 0 2rem ;
+}
+.aside{
+    width: 20vw;
+    height: 100vh;
+    border-left: 2px solid #dddddd;
+    background-color: white;
+    padding: 7vh 2vw 0 2vw;
 }
 
 #logo{text-decoration: none; color: black; text-align: left;}
@@ -81,14 +93,15 @@ html{
     font-size: 14pt;
 }
 
-body{
-    background-color: #fffdf0;
+.flexbody{
+    background-color: #f4f4f4;
     display: flex;
-
+    max-height: 92vh;
+    overflow: hidden;
 }
 
 main{width: 65vw;
-     max-height: 100vh; 
+     max-height: 100%; 
      overflow-y: auto;
     flex-grow: 1;
     }
@@ -98,10 +111,15 @@ main{width: 65vw;
     max-width: 1200px;
     min-height: 30vh;
     margin: 4rem auto;
-    border: 1px solid black;
+    border-radius: 1rem;
+    background-color:#FFFFFF;
     background-color: white;
     padding: 4rem;
     font-size: 1.2rem;
+
+    -webkit-box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 40px -15px rgba(0,0,0,0.75);
 }
 
 .container img{
@@ -130,13 +148,6 @@ main{width: 65vw;
     }
 
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #000000 #ffffff;
-  }
-
   @media only screen and (max-width:999px){
     .container{
         padding: 2rem;
@@ -148,12 +159,15 @@ main{width: 65vw;
 
   
   @media only screen and (max-width:750px){
-    body{
-        flex-direction: column
+    .flexbody{
+        flex-direction: column;
+        min-height:fit-content;
+        max-height:fit-content;
+
+        overflow:auto
     }
 
     nav{
-
         position: fixed; 
         background-color: #fffdf0; 
         top:0;
@@ -162,6 +176,7 @@ main{width: 65vw;
         flex-direction: column;
         height: 100%;
         z-index: 1;
+        padding-bottom: 3rem;
     }
 
     #menu{
@@ -173,7 +188,7 @@ main{width: 65vw;
         min-width: 80vw;
     }
 
-    header{
+    .nav{
         width: 100vw;
         max-width: 100vw;
     }
@@ -205,25 +220,25 @@ main{width: 65vw;
         overflow-x: auto;
     }
 
-    header{
+    .nav{
         height: fit-content;
         min-height: fit-content;
     }
 
     main{
         width: 100%;
+        min-height: max-content;
     }
 
     .container{
         padding: 1rem;
         width: 100%;
-        height: fit-content;
-       
+        min-height: max-content;
         margin-top: 1rem;
     }
 
-    main{max-height: initial; overflow-y: hidden;}
-    body{
+    main{max-height: fit-content; overflow-y:auto;}
+    .flexbody{
         overflow-y: auto;
         height: fit-content;
     }
@@ -232,30 +247,6 @@ main{width: 65vw;
         display: block;
     }
   }
-
-
-
-  @media only screen and (min-width:999px){
-    
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 0px;
-    border: 3px solid #ffffff;
-  }
-
-  }
-
-
-
 
 
   .skip-to-main-content-link {
