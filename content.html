@@ -18,22 +18,32 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
+
+
+        <meta name="description" content="Página de conteúdos da Acessibilidade For Devs">
 
 </head>
 
 <body aria-hidden="false" id="body">
     <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal          </a>
 
-    <header>
+    <header class="headercont">
         <div class="logo">
+            <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
 
+            <img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs">
         </div>
 
         <div class="searchbox">
-
+            <label for="search">
+                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+         
+                <span class="fa-sr-only">Pesquisar</span>
+            </label>
+            <input id="search"type="search" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
         </div>
 
         <div class="headernav">
@@ -46,9 +56,6 @@
     
         </div>
     </header>
-
-<div class="flexbody">
-
     <div class="darkmode">
         <div>
         <label for="darktoggle" >Modo escuro?</label>
@@ -57,35 +64,79 @@
         <label for="menutoggle" id="icon" tabindex="1" style="cursor: pointer;"><i class="fa-solid fa-bars" title="Ativar menu"></i></label>
         <input id="menutoggle" type="checkbox" style="display:none">
     </div>
+<div class="flexbody">
+
+  
    </a>
     <div class="nav">
-        <a id="logo" href="index.html"><div class="titlebox"><h1 class="title">Acessibilidade<br><b lang="en">for devs</b></h1></div></a>
         <nav id="menu">
-          
-            <a href="index.html">Home</a>
-            <a href="content.html?id=1">HTML Semântico</a>
-            <a href="content.html?id=2">Atributo Alt</a>
-            <a href="content.html?id=3">vLibras</a>
-            <a href="content.html?id=4">Leitores de Tela</a>
-            <a href="content.html?id=5">Daltonismo</a>
-            <a href="content.html?id=6">Acessibilidade na web</a>
-            <a href="content.html?id=7">Principios da Acessibilidade</a>
-            <a href="content.html?id=8">Tipos de fonte e acessibilidade digital</a>
-            <a href="content.html?id=9">Fontes para pessoas com dislexia</a>
-            <a href="content.html?id=10">Avaliação de Acessibilidade em Sites
-            </a>
-            <a href="content.html?id=11">Boas Práticas para Descrições de Imagens</a>
-            <a href="content.html?id=12">ARIA ou WAI-ARIA</a>
-            <a href="content.html?id=10">Avaliação de Acessibilidade em Sites
-            </a>
-            <a href="content.html?id=11">Boas Práticas para Descrições de Imagens</a>
-            <a href="content.html?id=12">ARIA ou WAI-ARIA</a>
-       
-       
+          <details open>
+            <summary><h3 class="underline">Geral</h3></summary>
+            <ul id="geral">
+               
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+            </ul>
+        </details>
+
+        <details >
+            <summary><h3 class="underline">Geral</h3></summary>
+            <ul id="geral">
+               
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary><h3 class="underline">Geral</h3></summary>
+            <ul id="geral">
+               
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+            </ul>
+        </details>
+
+        <details>
+            <summary><h3 class="underline">Geral</h3></summary>
+            <ul id="geral">
+               
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+                <li><a href="#">Lorem Ipsun</a></li>
+            </ul>
+        </details>
         </nav>
     </div>
 
-   
+    <section  class="aside">
+  
+        <details open>
+            <summary>      <h3 class="underline">Tópicos Relacionados</h3></summary>
+        <ul id="subtitulos-box">
+            <li><a href="#">Oiii</a></li>
+            <li><a href="#">Oiii</a></li>
+            <li><a href="#">Oiii</a></li>
+            <li><a href="#">Oiii</a></li>
+            <li><a href="#">Oiii</a></li>
+        </ul>
+        </details>
+    </section>
 
     <main>
         <article class="container" id="main">
@@ -102,18 +153,26 @@
     </main>
 
 
-    <section  class="aside">
-        <h3 class="underline">Tópicos Relacionados</h3>
-        <ul id="subtitulos-box">
-            <li><a href="#">Oiii</a></li>
-        </ul>
-    </section>
+ 
    </div>
 
 
     
     <script src="csv.js"></script>
     <script src="darkmode.js"></script>
+
+
+    
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 
 </html>

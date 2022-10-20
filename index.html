@@ -11,7 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+
     <link href="style/styleindex.css" rel="stylesheet">
+    <link href="style/geral.css" rel="stylesheet">
+    <link href="style/scroll.css" rel="stylesheet">
+
+
+
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,23 +25,42 @@
    
     <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal          </a>
 
-    <header>
+    <header class="headercont">
+    
 
-        <a id="logo" href="index.html"><h1 class="title">Acessibilidade<br><b lang="en">for devs</b></h1></a>
-        <p class="desc">Esta página reúne informações sobre Acessibilidade durante a
-            criação de páginas para a internet. Contém diversas dicas para
-            aprimorar seu site para atender a maior quantidade de pessoas.
-        </p>
+        <div class="searchbox">
+            <label for="search">
+                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+         
+                <span class="fa-sr-only">Pesquisar</span>
+            </label>
+            <input id="search"type="search" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
+        </div>
 
+        <div class="headernav">
+        
+                <a href="index.html">Home</a>
+                <a href="content.html">Docs</a>
+                <a href="forum.html">Fórum</a>
+                <a href="cadastro.html">Cadastre-se</a>
+                <button>Login</button>
+    
+        </div>
     </header>
 
-    <nav>
-        <ul class="menu">
-            <li><a href="content.html?id=6">O que é acessibilidade na Web</a></li>
-            <li><a href="constrast.html">Ferramenta de Contraste</a></li>
-            <li><a href="content.html?id=1">Boas Práticas</a></li>
-        </ul>
-    </nav>
+    <div class="indexmain">
+        <div class="infologo">
+            <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
+        <img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs">
+ 
+    <p class="desc">Esta página reúne informações sobre Acessibilidade durante a
+        criação de páginas para a internet. Contém diversas dicas para
+        aprimorar seu site para atender a maior quantidade de pessoas.
+    </p>
+    </div>
+</div>
+ 
 
     <main id="main">
         <h2 class="titleSection">Geral</h2>

@@ -2,15 +2,33 @@ body,html, *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Cantarell', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #surdez{
     justify-content: flex-start;
   }
 
-  #logo{text-decoration: none; color: black;}
+.indexmain{
+    background-color: #101010;
+    color: white;
 
+}
+
+.infologo{
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 40vw;
+}
+
+.indexmain{
+    border-bottom: 2px solid #dddddd;
+
+}
+
+.infologo img{
+    width: 100%;
+}
   
 
 .titleSection{
@@ -49,39 +67,19 @@ footer{
     padding: 1rem;
 }
 
-.title{
-    font-size: 5rem;
-    width: fit-content;
-    margin-top: 2rem;
-    line-height: 5.5rem;
-}
-
-.title::before{
-    content:"/";
-    font-size: 6rem;
-    font-weight: 600;
-    position: relative;
-    right: 2rem;
-    top:1rem;
-    margin-right: -2rem;
-}
-
-.title b{
-    font-weight: 200;
-    font-size: 5.5rem;
+.apresentacao{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .desc{
-    min-width: 270px;
-    max-width: 450px;
-    width: 30vw;
+  
+    justify-content: justify;
      font-size: 1.1rem;
      margin-top: 2rem;
-}
-
-header{
-    margin: 0 auto;
-    width: fit-content;
+     margin-bottom: 2rem;
 }
 
 .menu{
@@ -96,20 +94,29 @@ header{
 
     flex-shrink: 0;
     min-width: 350px;
-    width:15vw;
-    padding:3rem 1rem;
+    width:16vw;
+    
+    padding:3rem 2rem;
     margin:2rem 3rem 4rem 1rem;
-    border-top: 1px solid black;
-    border-bottom:1px solid black;
+   background-color: #ffffff;
     max-height: 80%;
     min-height: 80%;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 0px 15px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -7px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -7px rgba(0,0,0,0.75);
 
+}
+
+.pageMini a{
+    color:#CD00FF
 }
 
 .listPage{
     display: flex;
     margin: 0 auto;
     flex-wrap: nowrap;
+    list-style: none;
     max-width: 90vw;
     overflow-x: auto;
     justify-content: space-between;
@@ -149,6 +156,18 @@ nav{
 
 @media only screen and (max-width:999px){
 
+
+    .infologo{
+        margin: 0 auto;
+        padding: 1rem 0;
+        width: 90vw;
+    }
+    
+    .infologo img{
+        width: 100%;
+    }
+      
+  
     .menu{
         width: 100%;
     }
@@ -200,10 +219,7 @@ nav{
     width: 100vw;
 }
 
-header{
-    width: 100vw;
-    padding-left:2rem
-}
+
 
 .menu{flex-direction: column;
 
@@ -219,7 +235,7 @@ header{
 
 body{
     max-width: 100vw;
-    background-color: #fffdf0;
+    background-color: #f4f4f4;
 }
 
 
@@ -249,21 +265,6 @@ body{
 
 
     
-    /* Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-      width: 16px;
-    }
-  
-    *::-webkit-scrollbar-track {
-      background: #ffffff;
-    }
-  
-    *::-webkit-scrollbar-thumb {
-      background-color: #000000;
-      border-radius: 0px;
-      border: 3px solid #ffffff;
-    }
-  
 
     @media only screen and (min-width:2200px){
         .listPage{justify-content: flex-start;}

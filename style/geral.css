@@ -2,9 +2,9 @@
     border-bottom: 0.5vh solid #CD00FF;
 }
 
-header{
-    height: 8vh;
-    width: 100vw;
+.headercont{
+    height: 10vh;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,4 +31,113 @@ header button{
     cursor: pointer;
     border-radius: 1rem;
     margin-left: 1rem;
+}
+
+.headercont img{
+    height: 100%;
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+.logo{
+    padding: 2vh;
+    height: 100%;
+}
+
+.searchbox{
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #101010;
+    border: 1.5px solid white;
+    border-radius: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+header i{
+    color:#ffffff
+}
+
+header input{
+    background-color: #101010;
+    width: 16vw;
+    border: none;
+    color: white;
+}
+
+header input[type=submit]{
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color:black
+}
+
+@media only screen and (max-width:750px){
+    .headercont{
+        flex-direction: column;
+        height: fit-content;
+    }
+
+
+    .headernav{
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        order:-1;
+        justify-content: center;
+    }
+    .headercont img{
+        max-width: 80vw;
+    }
+
+    .headercont .searchbox{
+        width: 100%;
+    }
+
+    header input{
+        background-color: #101010;
+        width: 70%;
+        border: none;
+        color: white;
+    }
+
+    header input[type=submit]{
+        background-color: #ffffff;
+        width: fit-content;
+        padding: 1vw;
+        border-radius: 1rem;
+        color:black
+    }
+
+    .headernav{
+        width: 100vw;
+    }
+
+    .headercont a{
+        font-size: 1rem;
+
+    }
+
+
+    
+header button{
+    background-color: white;
+    font-size: 1rem;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+}
+
+header{
+    border: 0;
+    margin: 0;
+    padding-bottom: 1rem;
 }
