@@ -78,10 +78,12 @@ header input[type=submit]{
     color:black
 }
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:999px){
     .headercont{
         flex-direction: column;
         height: fit-content;
+        padding-bottom:2rem;
+
     }
 
 

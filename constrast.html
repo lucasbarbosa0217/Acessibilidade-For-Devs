@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link href="style/styleindex.css" rel="stylesheet">
+    <link href="style/geral.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
@@ -21,18 +22,33 @@
 <body aria-hidden="false" id="body">
     <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal          </a>
 
-    <header>
+    <header class="headercont">
+        <div class="logo">
+            <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
+            <a href="index.html"><img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs"></a>
+            
+        </div>
 
-        <a id="logo" href="index.html"><h1 class="title">Acessibilidade<br><b lang="en">for devs</b></h1></a>      
+        <div class="searchbox">
+            <label for="search">
+                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+         
+                <span class="fa-sr-only">Pesquisar</span>
+            </label>
+            <input id="search"type="search" placeholder="Pesquisar">
+            <input type="submit" value="Pesquisar">
+        </div>
 
+        <div class="headernav">
+        
+                <a href="constrast.html">Ferramenta de Constraste</a>
+                <a href="content.html">Docs</a>
+                <a href="forum.html">Fórum</a>
+                <a href="cadastro.html">Cadastre-se</a>
+                <button>Login</button>
+    
+        </div>
     </header>
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="content.html?id=6">O que é acessibilidade na Web</a></li>
-            <li><a href="content.html?id=1">Boas Práticas</a></li>
-        </ul>
-    </nav>
     <section class="container" id="main">
         <div class="box">
         <div class="inputbox input_color_foreground">  

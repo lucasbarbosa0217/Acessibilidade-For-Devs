@@ -1,0 +1,107 @@
+.user{
+    margin: 1rem 0;
+}
+
+.username{
+    font-size: 1.5rem;
+}
+
+.userposts{
+    margin-top: 3rem;
+}
+
+.userpostcard{
+    background: #dddddd;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#postuserlist a{
+    min-width: 100%;}
+
+    .postforum{
+        background-color: #dddddd;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .postforum{
+        color: black;
+    
+    }
+
+
+    .respostas{
+        width: 80%;
+        margin: 0 auto;
+        padding: 2rem 4rem;
+    }
+
+    #forumname{
+        margin-bottom: 0.5rem;
+    }
+
+    .infoforum{
+        font-size:0.9rem
+    }
+
+    #forumusername{
+        color:#cd00ff
+    }
+
+    .postforum i {
+        color:#cd00ff;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .listpost a{
+        text-decoration: none;
+    }
+
+    .postforum h3{
+        margin: 0;
+        padding: 0;
+    } 
+.container{
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+    min-height: 15vh;
+}
+input[type=submit]{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5rem;
+}
+
+
+.answer{
+    margin-top: 0;
+}
+
+    @media only screen and (max-width:999px) {
+        .respostas{
+            padding: 2rem;
+            width: 100%;
+            min-height: max-content;
+            margin-top: 1rem;
+        }
+    
+    }
