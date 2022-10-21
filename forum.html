@@ -18,6 +18,14 @@
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/forumPosts.service.js"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -59,8 +67,6 @@
     </header>
     
     <div class="flexbody">
-
-
         <div class="nav">
             <div id="menu">
             <h1>Bem Vindo ao Fórum!</h1>
@@ -91,29 +97,7 @@
 
                 <div id="listpost" class="listpost">
                
-                        <a href="forumpost.html">
-                            <div class="postforum">
-                                <i class="fa-solid fa-question"></i>
-                                <h3>Como faço isso?</h3>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                        </a>
-
-                        <a href="forumpost.html">
-                            <div class="postforum">
-                                <i class="fa-solid fa-question"></i>
-                                <h3>Como faço isso?</h3>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                        </a>
-
-                        <a href="forumpost.html">
-                            <div class="postforum">
-                                <i class="fa-solid fa-question"></i>
-                                <h3>Como faço isso?</h3>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                        </a>
+                
                 
                 </div>
             </article>
@@ -141,6 +125,8 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
+    <script src="./script/document/domForum.js"></script>
 </body>
 
 </html>

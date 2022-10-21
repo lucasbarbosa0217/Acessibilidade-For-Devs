@@ -24,14 +24,31 @@
 #postuserlist a{
     min-width: 100%;}
 
-    .postforum{
-        background-color: #dddddd;
+    .basepost{
+        background-color: #fafafa;
         border-radius: 3rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1.5rem;
         margin-bottom: 1rem;
+        flex-wrap: wrap;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.44);
+        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.44);
+        box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.44);
+    }
+
+    .basepost:hover{
+        transform:scale(1.02) ;
+        transition: .100s;
+    }
+
+
+    .postforum{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .postforum{
@@ -62,6 +79,8 @@
         color:#cd00ff;
         font-size: 1.5rem;
         font-weight: 800;
+        flex-wrap: wrap;
+        flex-shrink: 0;
     }
 
     .listpost a{
@@ -75,6 +94,26 @@
 .container{
     margin-bottom: 1rem;
     padding: 2rem;
+}
+
+.contentforum{
+    margin-top: 1rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.contentforum hr{
+  
+    border: 0.5px solid #DDDDDD;
+
+}
+
+.listpost a{
+    color: black;
+}
+
+.contentforum p {
+    margin-top: 1rem;
 }
 
 textarea{
