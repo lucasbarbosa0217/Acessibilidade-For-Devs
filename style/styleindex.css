@@ -61,7 +61,6 @@ body,html, *{
 .pageMini a{text-align: right; width: 100%;}
 
 footer{
-    border-top: 1px solid black ;
     height:5rem;
     text-align: center;
     padding: 1rem;
@@ -196,7 +195,8 @@ nav a{
 
 .titleSection{
     padding: 0 0 0 1rem;
-    margin: 0;
+    margin: 2rem 0 0 2rem;
+    font-size: 2.4rem;
 }
 
 

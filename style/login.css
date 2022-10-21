@@ -1,0 +1,49 @@
+
+
+.login-form {
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    margin: auto;
+}
+
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+.login-form button {
+    margin-top: 20px;
+    padding: 7px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight:bold;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.login-form button:hover {
+background-color: rgb(35, 0, 68);
+cursor: pointer;
+}
+
+h1, p {
+    text-align: center;
+}
+
+.container a:hover{
+    color: rgb(149, 36, 255);
+}
+
+@media only screen and (max-width:728px){
+    .login-form{
+    width: 100%;
+    }
+}

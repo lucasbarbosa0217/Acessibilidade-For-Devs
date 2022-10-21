@@ -15,7 +15,7 @@
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
     <link href="style/contentstyle.css" rel="stylesheet">
-    <link href="style/contentstyle.css" rel="stylesheet">
+    <link href="style/login.css" rel="stylesheet">
 
 
 
@@ -49,14 +49,48 @@
                 <a href="content.html">Docs</a>
                 <a href="forum.html">Fórum</a>
                 <a href="cadastro.html">Cadastre-se</a>
-                <button>Login</button>
+                <a href="login.html"><button>Login</button></a>
     
         </div>
     </header>
 
 
+    <section class="container" id="main">
+        <h1>Cadastre-se</h1>
+        <form action="" class="login-form">
+            <label for="email">Nome Completo</label>
+            <input type="text" placeholder="João da Silva" name="nome" required>
+
+            <label for="email">Email</label>
+            <input type="text" placeholder="usuario@acessibilidade.com.br" name="email" required>
+
+            <label for="senha">Senha</label>
+            <input type="password" placeholder="Digite a senha" name="senha" required>
+
+            <label for="foto">Foto de perfil</label>
+            <input type="file" name="foto" required>
+
+
+            <button type="submit">Cadastre-se</button>
+        </form>
+        <p>Já possui uma conta? <a href="/login.html">Faça login</a></p>
+
+    </section>
+
     <footer>
-        <p>2022 FIAP </p>
+        <div>
+            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
+            <p> © All rights reserved - FIAP - 2022</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/forum.html">Fórum</a></li>
+                <li><a href="/content.html">Documentação</a></li>
+                <li><a href="/cadastro.html">Cadastre-se</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
     </footer>
 
 </body>
