@@ -86,6 +86,9 @@ header input[type=submit]{
 
     }
 
+    #menu{
+        display: none;
+    }
 
     .headernav{
         display: flex;
@@ -143,3 +146,5 @@ header{
     margin: 0;
     padding-bottom: 1rem;
 }
+
+

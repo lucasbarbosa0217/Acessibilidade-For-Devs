@@ -14,6 +14,14 @@
     <link href="style/forum.css" rel="stylesheet">
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/forumPosts.service.js"></script>
+    <script src="./script/service/forumPostComments.service.js"></script>
+
+
 
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
@@ -56,7 +64,7 @@
             <a href="content.html">Docs</a>
             <a href="forum.html">Fórum</a>
             <a href="cadastro.html">Cadastre-se</a>
-            <button>Login</button>
+            <button id="loginClick">Login</button>
 
         </div>
     </header>
@@ -70,16 +78,12 @@
             <h1>Bem Vindo ao Fórum!</h1>
             <div class="user">
             <p>Você está logado como:</p>
-            <b class="username"id="username">Lucas</b>
+            <b class="username"id="username"></b>
             <hr>
             <div class=" userposts" >
                 <h2> Seus posts no fórum:</h2>
                 <div id="postuserlist">
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
+              
                 </div>
             </div>
         </div>
@@ -90,20 +94,19 @@
 
         <main>
             <article class="container" id="main">
-                <h1 id="forumname"> Fórum do Acessibilidade for Devs</h1>
-                <p class="infoforum">Pergunta feita por <b id="forumusername">Lucas Barbosa</b>, <b id="forumdate">12 de setembro de 2022</b></p>
+                <h1 id="forumname"> ERRO 404</h1>
+                <p class="infoforum">Pergunta feita por <b id="forumusername"></b>, <b id="forumdate"></b></p>
 
                 <p id="contentforum">
                     
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend sapien in dui congue, non scelerisque lacus pharetra. Proin porttitor sem et lacus porta efficitur. Aliquam in magna sodales, consectetur ipsum vel, porttitor metus. Quisque orci nulla, lacinia nec nibh in, volutpat tincidunt sem. Ut quis scelerisque mauris, ac scelerisque massa. Vivamus eu lacus efficitur nisi molestie auctor. Ut ullamcorper tempus magna eu porttitor. Curabitur aliquam ipsum nec fringilla bibendum. Morbi sed dignissim sem. Nullam eget velit at ligula varius viverra. Maecenas non ligula a dui vehicula semper. Cras ex dui, fermentum id sapien eget, pellentesque congue dui.
-                </p>
+POST NÃO ENCONTRADO                </p>
             </article>
             <h2 class="respostas"> Escreva uma resposta:</h2>
 
             <div class="container answer">
 
-                <form>
-                   <textarea></textarea>
+                <form id="comentario">
+                   <textarea id="caixa" required></textarea>
                    <input type="submit" value="Enviar Resposta">
                 </form>
             </div>
@@ -111,13 +114,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend sapien i
             <h2 class="respostas"> Respostas (<b id="quantresponsta">02</b>) :</h2>
 
             <div id="listanswer">
-                <div class="container answer">
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend sapien in dui congue, non scelerisque lacus pharetra. Proin porttitor sem et lacus porta efficitur. Aliquam in magna sodales, consectetur ipsum vel, porttitor metus. Quisque orci nulla, lacinia nec nibh in, volutpat tincidunt sem. Ut quis scelerisque mauris, ac scelerisque massa. Vivamus eu lacus efficitur nisi molestie auctor. Ut ullamcorper tempus magna eu porttitor. Curabitur aliquam ipsum nec fringilla bibendum. Morbi sed dignissim sem. Nullam eget velit at ligula varius viverra. Maecenas non ligula a dui vehicula semper. Cras ex dui, fermentum id sapien eget, pellentesque congue dui.</p>
-                
-                    <p class="infoforum">Resposta feita por <b id="forumusername">Lucas Barbosa</b>, <b id="forumdate">12 de setembro de 2022</b></p>
-
-
-                </div>
+                <p class="respostas"> Sem respostas</p>
             </div>
         </main>
 
@@ -141,6 +138,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend sapien i
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+        <script src="./script/document/changeLoginButton.js"></script>
+        <script type="text/javascript">
+            page = "post";
+        </script>
+        <script src="./script/document/domForum.js"></script>
+
 </body>
 
 </html>

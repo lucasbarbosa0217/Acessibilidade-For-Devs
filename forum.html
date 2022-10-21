@@ -61,7 +61,7 @@
             <a href="content.html">Docs</a>
             <a href="forum.html">Fórum</a>
             <a href="cadastro.html">Cadastre-se</a>
-            <button>Login</button>
+            <button id="loginClick">Login</button>
 
         </div>
     </header>
@@ -72,16 +72,12 @@
             <h1>Bem Vindo ao Fórum!</h1>
             <div class="user">
             <p>Você está logado como:</p>
-            <b class="username"id="username">Lucas</b>
+            <b class="username"id="username"></b>
             <hr>
             <div class=" userposts" >
                 <h2> Seus posts no fórum:</h2>
                 <div id="postuserlist">
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
+                <P>Você ainda não postou no fórum.</P>
                 </div>
             </div>
         </div>
@@ -125,8 +121,11 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
+   <script type="text/javascript">
+    page = "index";
+</script>
     <script src="./script/document/domForum.js"></script>
+    <script src="./script/document/changeLoginButton.js"></script>
 </body>
 
 </html>

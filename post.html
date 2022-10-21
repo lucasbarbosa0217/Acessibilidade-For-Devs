@@ -11,21 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
     <link href="style/contentstyle.css" rel="stylesheet">
     <link href="style/contentstyle.css" rel="stylesheet">
 
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./script/getTokenStorage.js"></script>
-    <script src="./script/httpClient.js"></script>
-    <script src="./script/isLogin.js"></script>
-    <script src="./script/service/users.service.js"></script>
 
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+
+    <script src="script/service/forumPosts.service.js"></script>
+
 </head>
 
 <body aria-hidden="false" id="body">
@@ -54,25 +55,22 @@
                 <a href="content.html">Docs</a>
                 <a href="forum.html">Fórum</a>
                 <a href="cadastro.html">Cadastre-se</a>
-                <button id="loginClick">Login</button>
+                <button>Login</button>
     
         </div>
     </header>
 
 
-    <form id="cadastro">
-        <label for="username">Nome:</label>
-        <input type="text" id="username" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-        <label for="password">Senha: </label>
-        <input type="password" id="password" required>
-        <input type="submit">        
-    </form>
+  <form id="postforum">
+    <label for="titulo">Titulo</label>
+    <input type="text" id="titulo" name="titulo" required>
+    <label for="password">Conteúdo do Post:</label>
+    <textarea id="conteudo" name="conteudo" required></textarea>
+    <input type="submit">
+  </form>
 
-    <script src="./script/document/changeLoginButton.js"></script>
-    <script src="./script/document/domCadastro.js"></script>
-
+  <script src="./script/document/domPost.js"></script>
+  <script src="./script/document/changeLoginButton.js"></script>
 
 </body>
 

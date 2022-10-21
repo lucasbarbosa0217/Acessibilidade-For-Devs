@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
-
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
     <link href="style/contentstyle.css" rel="stylesheet">
@@ -21,6 +21,12 @@
 
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+
+    <script src="script/service/sessions.service.js"></script>
+
 </head>
 
 <body aria-hidden="false" id="body">
@@ -55,9 +61,16 @@
     </header>
 
 
-    <footer>
-        <p>2022 FIAP </p>
-    </footer>
+  <form id="login">
+    <label for="email">Emai:</label>
+    <input type="text" id="email" name="email" required>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit">
+  </form>
+
+  <script src="script/document/domLogin.js"></script>
+  <script src="./script/document/changeLoginButton.js"></script>
 
 </body>
 

@@ -111,7 +111,6 @@ main{width: 65vw;
 .container{
     width: 80%;
     max-width: 1200px;
-    min-height: 30vh;
     margin: 4rem auto;
     border-radius: 1rem;
     background-color:#FFFFFF;
