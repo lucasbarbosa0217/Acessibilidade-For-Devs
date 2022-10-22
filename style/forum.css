@@ -153,4 +153,5 @@ input[type="submit"] {
   border: 0;
   width: 14rem !important;
   margin-left: auto;
+  cursor: pointer;
 }

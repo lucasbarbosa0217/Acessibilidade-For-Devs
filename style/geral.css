@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 3rem;
   background-color: #101010;
 }
 
@@ -19,7 +19,7 @@
 #loginClick {
   border: 0;
   border-radius: 0.5rem;
-  min-width: 5rem;
+  margin-left: 0;
 }
 
 header a {
@@ -27,6 +27,12 @@ header a {
   text-decoration: none;
   font-size: 1.2rem;
   margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  header a {
+    font-size: 1rem;
+  }
 }
 
 header a:hover {
@@ -61,15 +67,21 @@ header button:hover {
 
 .searchbox {
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: #101010;
   border: 1.5px solid white;
   border-radius: 1rem;
   color: #ffffff;
   font-size: 1rem;
-  width: 25vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+@media only screen and (max-width: 1400px) {
+  .searchbox {
+    width: 95%;
+  }
 }
 
 header i {

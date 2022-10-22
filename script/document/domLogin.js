@@ -9,7 +9,7 @@ form.addEventListener("submit", (event) => {
       localStorage.setItem("TOKEN_KEY", data.token);
 
       HttpClient.api.defaults.headers.common.Authorization = getTokenStorage();
-      window.alert("Login com sucesso");
+      window.alert("Logado com sucesso");
       localStorage.setItem("USERNAME", data.userName);
       window.location.href = "./index.html";
     })
