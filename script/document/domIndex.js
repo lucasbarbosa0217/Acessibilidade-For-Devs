@@ -13,10 +13,20 @@ PostCategoriesService.readAll().then((data) => {
 
         index.innerHTML += conteudo
         console.log(conteudo)
+        listDaltonismo = document.getElementById("Daltonismo")
+        listGeral = document.getElementById("Geral")
+        listCegueira = document.getElementById("Cegueira")
+        listSurdez = document.getElementById("Surdez")
+        listDislexia = document.getElementById("Dislexia")
+        pegarPosts();
     });
 });
 
+
+function pegarPosts(){
 PostsService.readAll().then((data) => {
+    
+  
     data.forEach((element) => {
         console.log(element.category.name)
         if(element.category.name== "Daltonismo"){
@@ -31,11 +41,6 @@ PostsService.readAll().then((data) => {
             dislexia.push(element)
         }})
 
-        listDaltonismo = document.getElementById("Daltonismo")
-        listGeral = document.getElementById("Geral")
-        listCegueira = document.getElementById("Cegueira")
-        listSurdez = document.getElementById("Surdez")
-        listDislexia = document.getElementById("Dislexia")
 
         daltonismo.forEach((element) => {
             console.log(element)
@@ -97,4 +102,4 @@ PostsService.readAll().then((data) => {
             listDislexia.innerHTML += conteudo;
         })
     
-});
+});}
