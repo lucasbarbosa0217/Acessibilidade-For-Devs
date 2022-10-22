@@ -97,12 +97,6 @@ input[type="color"] {
   text-align: center;
 }
 
-.certificate:first-of-type {
-}
-
-.certificate:last-of-type {
-}
-
 .title_nivel {
   padding: 8px;
   margin: 0 auto;
@@ -156,18 +150,6 @@ body {
 
   .certificate {
     width: 50%;
-  }
-
-  .certificate:first-of-type {
-  }
-
-  .certificate:nth-child(2) {
-  }
-
-  .certificate:nth-child(3) {
-  }
-
-  .certificate:last-of-type {
   }
 }
 
