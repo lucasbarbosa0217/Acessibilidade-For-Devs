@@ -1,117 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <link href="style/geral.css" rel="stylesheet">
-    <link href="style/scroll.css" rel="stylesheet">
-    <link href="style/contentstyle.css" rel="stylesheet">
-    <link href="style/login.css" rel="stylesheet">
-
-
-
-
+    <link href="style/geral.css" rel="stylesheet" />
+    <link href="style/scroll.css" rel="stylesheet" />
+    <link href="style/contentstyle.css" rel="stylesheet" />
+    <link href="style/login.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d2a51699f1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script/getTokenStorage.js"></script>
     <script src="./script/httpClient.js"></script>
     <script src="./script/isLogin.js"></script>
     <script src="./script/service/sessions.service.js"></script>
 
+    <script
+      src="https://kit.fontawesome.com/d2a51699f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-
-    <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
-</head>
-
-<body aria-hidden="false" id="body">
-
-    <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal </a>
+  <body aria-hidden="false" id="body">
+    <a href="#main" class="skip-to-main-content-link"
+      >Ir para o conteúdo principal
+    </a>
     <header class="headercont">
-        <div class="logo">
-            <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
-            <a href="index.html"><img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs"></a>
+      <div class="logo">
+        <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
+        <a href="index.html"
+          ><img
+            src="img/FACUL_Acessibilidade_Logo.png"
+            alt="Logo do Acessibilidade For Devs"
+        /></a>
+      </div>
 
+      <form id="searchForm">
+        <div class="searchbox">
+          <label for="search">
+            <span
+              aria-hidden="true"
+              class="fa-solid fa-magnifying-glass"
+            ></span>
+
+            <span class="fa-sr-only">Pesquisar</span>
+          </label>
+          <input id="search" type="search" placeholder="Pesquisar" />
+          <input type="submit" value="Pesquisar" />
         </div>
+      </form>
 
-        
-        <form id="searchForm">
-            <div class="searchbox">
-                <label for="search">
-                    <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
-             
-                    <span class="fa-sr-only">Pesquisar</span>
-                </label>
-                <input id="search"type="search" placeholder="Pesquisar">
-                <input type="submit" value="Pesquisar">
-            </div>
-            </form>
-
-        <div class="headernav">
-
-            <a href="constrast.html">Ferramenta de Constraste</a>
-            <a href="content.html">Docs</a>
-            <a href="forum.html">Fórum</a>
-            <a href="cadastro.html">Cadastre-se</a>
-            <button id="loginClick">Login</button>
-
-        </div>
+      <div class="headernav">
+        <a href="constrast.html">Ferramenta de Constraste</a>
+        <a href="content.html">Docs</a>
+        <a href="forum.html">Fórum</a>
+        <a href="cadastro.html">Cadastre-se</a>
+        <button id="loginClick">Login</button>
+      </div>
     </header>
 
-
     <section class="container" id="main">
-        <h1>Login</h1>
-        <form  id="login" class="login-form">
-            <label for="email">Email</label>
-            <input type="text" placeholder="usuario@acessibilidade.com.br" name="email" id="email" required>
-            <label for="password">Senha</label>
-            <input type="password" id="password" placeholder="Digite a senha" name="senha" required>
+      <h1>Login</h1>
+      <form id="login" class="login-form">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          placeholder="usuario@acessibilidade.com.br"
+          name="email"
+          id="email"
+          required
+        />
+        <label for="password">Senha</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Digite a senha"
+          name="senha"
+          required
+        />
 
-            <input type="submit" value="Fazer Login">
-        </form>
-        <p>Não possui uma conta? <a href="/cadastro.html">Cadastre-se</a></p>
-
+        <input type="submit" value="Fazer Login" />
+      </form>
+      <p>Não possui uma conta? <a href="/cadastro.html">Cadastre-se</a></p>
     </section>
 
     <footer>
-        <div>
-            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
-            <p> © All rights reserved - FIAP - 2022</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/forum.html">Fórum</a></li>
-                <li><a href="/content.html">Documentação</a></li>
-                <li><a href="/cadastro.html">Cadastre-se</a></li>
-                <li><a href="/login.html">Login</a></li>
-            </ul>
-        </div>
+      <div>
+        <img
+          class="logo-footer"
+          src="./img/FACUL_Acessibilidade_LogoPreta.png"
+          alt="Logo Acessibilidade 4 Devs"
+        />
+        <p>© All rights reserved - FIAP - 2022</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/forum.html">Fórum</a></li>
+          <li><a href="/content.html">Documentação</a></li>
+          <li><a href="/cadastro.html">Cadastre-se</a></li>
+          <li><a href="/login.html">Login</a></li>
+        </ul>
+      </div>
     </footer>
     <script src="script/document/domLogin.js"></script>
     <script src="./script/document/changeLoginButton.js"></script>
     <script src="./script/document/domSearch.js"></script>
 
     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
-</body>
-
+  </body>
 </html>

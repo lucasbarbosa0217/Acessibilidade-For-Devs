@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesquisa</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <link href="style/styleindex.css" rel="stylesheet">
-    <link href="style/geral.css" rel="stylesheet">
-    <link href="style/scroll.css" rel="stylesheet">
-
+    <link href="style/styleindex.css" rel="stylesheet" />
+    <link href="style/geral.css" rel="stylesheet" />
+    <link href="style/scroll.css" rel="stylesheet" />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./script/getTokenStorage.js"></script>
@@ -23,74 +23,78 @@
     <script src="./script/isLogin.js"></script>
     <script src="./script/service/search.service.js"></script>
 
+    <script
+      src="https://kit.fontawesome.com/d2a51699f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
-</head>
-
-<body aria-hidden="false" id="body">
-   
-    <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal          </a>
+  <body aria-hidden="false" id="body">
+    <a href="#main" class="skip-to-main-content-link"
+      >Ir para o conteúdo principal
+    </a>
     <header class="headercont">
-        <div class="logo">
-            <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
-            <a href="index.html"><img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs"></a>
-            
-        </div>
+      <div class="logo">
+        <h1 class="fa-sr-only">Acessiblidade for Devs</h1>
+        <a href="index.html"
+          ><img
+            src="img/FACUL_Acessibilidade_Logo.png"
+            alt="Logo do Acessibilidade For Devs"
+        /></a>
+      </div>
 
-        
-        <form id="searchForm">
-            <div class="searchbox">
-                <label for="search">
-                    <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
-             
-                    <span class="fa-sr-only">Pesquisar</span>
-                </label>
-                <input id="search"type="search" placeholder="Pesquisar">
-                <input type="submit" value="Pesquisar">
-            </div>
-            </form>
-        <div class="headernav">
-        
-                <a href="constrast.html">Ferramenta de Constraste</a>
-                <a href="content.html">Docs</a>
-                <a href="forum.html">Fórum</a>
-                <a href="cadastro.html">Cadastre-se</a>
-                <button>Login</button>
-    
+      <form id="searchForm">
+        <div class="searchbox">
+          <label for="search">
+            <span
+              aria-hidden="true"
+              class="fa-solid fa-magnifying-glass"
+            ></span>
+
+            <span class="fa-sr-only">Pesquisar</span>
+          </label>
+          <input id="search" type="search" placeholder="Pesquisar" />
+          <input type="submit" value="Pesquisar" />
         </div>
+      </form>
+      <div class="headernav">
+        <a href="constrast.html">Ferramenta de Constraste</a>
+        <a href="content.html">Docs</a>
+        <a href="forum.html">Fórum</a>
+        <a href="cadastro.html">Cadastre-se</a>
+        <button>Login</button>
+      </div>
     </header>
 
-
- 
-
-    <main id="main" style="margin:3rem 0">
-        <h2 class="titleSection" style="font-size: 2rem;">Resultado de pesquisa (<b id="palavra">Palavra que pesquisei</b>):</h2>
-        <ul class="listPage" id="searchList" style="margin-top:3rem">
-           <h2>Nenhum resultado</h2>
-        </ul>
-
-
+    <main id="main" style="margin: 3rem 0">
+      <h2 class="titleSection" style="font-size: 2rem">
+        Resultado de pesquisa (<b id="palavra">Palavra que pesquisei</b>):
+      </h2>
+      <ul class="listPage" id="searchList" style="margin-top: 3rem">
+        <h2>Nenhum resultado</h2>
+      </ul>
     </main>
 
     <footer>
-        <div>
-            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
-            <p> © All rights reserved - FIAP - 2022</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/forum.html">Fórum</a></li>
-                <li><a href="/content.html">Documentação</a></li>
-                <li><a href="/cadastro.html">Cadastre-se</a></li>
-                <li><a href="/login.html">Login</a></li>
-            </ul>
-        </div>
+      <div>
+        <img
+          class="logo-footer"
+          src="./img/FACUL_Acessibilidade_LogoPreta.png"
+          alt="Logo Acessibilidade 4 Devs"
+        />
+        <p>© All rights reserved - FIAP - 2022</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/forum.html">Fórum</a></li>
+          <li><a href="/content.html">Documentação</a></li>
+          <li><a href="/cadastro.html">Cadastre-se</a></li>
+          <li><a href="/login.html">Login</a></li>
+        </ul>
+      </div>
     </footer>
     <script src="./script/document/domSearch.js"></script>
     <script src="./script/document/domSearchPage.js"></script>
-
-
-</body>
-
+  </body>
 </html>
