@@ -105,7 +105,7 @@ if (page == "post") {
       ForumPostCommentsService.create(id, caixa.value)
         .then((data) => {
           window.alert("Comentário Feito");
-          window.reload();
+          window.location.reload();
         })
         .catch((error) => {
           windowa.alert("Erro ao fazer comentário");
