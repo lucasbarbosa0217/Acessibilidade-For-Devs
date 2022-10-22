@@ -13,13 +13,14 @@ PostCategoriesService.readAll().then((data) => {
 
         index.innerHTML += conteudo
         console.log(conteudo)
-        listDaltonismo = document.getElementById("Daltonismo")
-        listGeral = document.getElementById("Geral")
-        listCegueira = document.getElementById("Cegueira")
-        listSurdez = document.getElementById("Surdez")
-        listDislexia = document.getElementById("Dislexia")
-        pegarPosts();
+    
     });
+    listDaltonismo = document.getElementById("Daltonismo")
+    listGeral = document.getElementById("Geral")
+    listCegueira = document.getElementById("Cegueira")
+    listSurdez = document.getElementById("Surdez")
+    listDislexia = document.getElementById("Dislexia")
+    pegarPosts();
 });
 
 
