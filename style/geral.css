@@ -12,6 +12,10 @@
     background-color:#101010
 }
 
+#search{
+    padding: 0.5rem 1rem;
+}
+
 header a{
     color: white;
     text-decoration: none;
