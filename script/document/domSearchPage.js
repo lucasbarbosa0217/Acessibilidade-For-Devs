@@ -4,6 +4,8 @@ const urlParams = new URLSearchParams(queryString);
 filter = urlParams.get("filter")
 
 searchList = document.getElementById("searchList");
+palavra = document.getElementById("palavra");
+palavra.innerHTML = filter
 if(filter != '' && filter != null){
 SearchService.search(filter).then((data) => {
     if(data.length>0){
