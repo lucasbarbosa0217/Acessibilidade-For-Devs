@@ -17,7 +17,7 @@
     padding: 7px;
 }
 
-.login-form button {
+.login-form input[type=submit] {
     margin-top: 20px;
     padding: 7px;
     background-color: black;
@@ -29,7 +29,7 @@
     margin: 20px auto;
 }
 
-.login-form button:hover {
+.login-form input[type=submit]:hover {
 background-color: rgb(35, 0, 68);
 cursor: pointer;
 }

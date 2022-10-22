@@ -149,6 +149,8 @@ header{
 }
 
 footer {
+
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 4rem;
@@ -167,6 +169,10 @@ footer ul{
     list-style: none;
     text-align: right;
 }
+
+textarea{padding: 1rem;}
+
+input{font-size: 1.1rem;}
 
 footer ul a {
     color: #393939;

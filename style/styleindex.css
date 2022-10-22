@@ -118,7 +118,7 @@ footer{
     list-style: none;
     max-width: 90vw;
     overflow-x: auto;
-    justify-content: space-between;
+    justify-content: start;
    
 }
 

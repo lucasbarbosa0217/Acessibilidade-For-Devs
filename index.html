@@ -15,6 +15,12 @@
     <link href="style/styleindex.css" rel="stylesheet">
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/postCategory.service.js"></script>
+    <script src="./script/service/posts.service.js"></script>
 
 
 
@@ -27,7 +33,7 @@
 
     <header class="headercont">
     
-
+        <form id="searchForm">
         <div class="searchbox">
             <label for="search">
                 <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
@@ -37,6 +43,7 @@
             <input id="search"type="search" placeholder="Pesquisar">
             <input type="submit" value="Pesquisar">
         </div>
+        </form>
 
         <div class="headernav">
         
@@ -44,7 +51,7 @@
                 <a href="content.html">Docs</a>
                 <a href="forum.html">Fórum</a>
                 <a href="cadastro.html">Cadastre-se</a>
-                <a href="login.html"><button>Login</button></a>
+               <button id="loginClick">Login</button>
     
         </div>
     </header>
@@ -63,156 +70,10 @@
  
 
     <main id="main">
-        <h2 class="titleSection">Geral</h2>
-        <ul class="listPage">
-            <li>
-                <div class="pageMini">
-                    <h3>Html Semântico</h3>
-                    <p>
-                        Uma boa parte da acessibilidade, trata-se de fazer o uso do HTML semântico na hora do desenvolvimento de front-end.  Além de ter um papel importante em auxiliar os leitores de tela, que são muito utilizados por deficientes visuais, facilitam a manutenção, compreensão do documento, colaborando inclusive no rankeamento de SEO...
-                    </p>
-                    <p class="link"><a href="content.html?id=1"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
+        <div id="indexContent">
+       
 
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>O que é Acessibilidade na Web</h3>
-                    <p>
-                       As barreiras também existem na web e afetam milhões de pessoas com deficiência no mundo. Atualmente, estes cidadãos com dificuldades motoras sensoriais ou cognitivas dependem muito dos progressos em termos de acessibilidade web
-                        ...
-                       </p>
-                       <p class="link"><a href="content.html?id=6"><i class="fa-solid fa-arrow-right"title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>Avaliação de acessibilidade em sites</h3>
-                    <p>
-                        Um site acessível é aquele que garante acesso, utilização e compreensão ao maior número possível de usuários, independente de deficiência, limitação ou tecnologia utilizada. Mas, quando o assunto é acessibilidade, a pergunta mais frequente dos profissionais que desenvolvem para a Web é: como saber se meu site é acessível?</p>
-                    <p class="link"><a href="content.html?id=10"><i class="fa-solid fa-arrow-right"
-                                title="Acessar Conteúdo"></i></a></p>
-
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-
-                    <h3>Princípios da acessibilidade</h3>
-                    <p>
-                        A informação e os componentes da interface de utilizador têm de ser apresentados de forma a que os utilizadores as possam perceber. Todo conteúdo não textual deve ter uma forma de exibição...    
-                    </p>
-
-                    <p class="link"><a href="content.html?id=7"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-        </ul>
-
-
-        <h2 class="titleSection">Cegueira ou baixa visão</h2>
-        <ul class="listPage">
-            <li>
-                <div class="pageMini">
-                    <h3>Leitores de Tela</h3>
-                    <p>
-                        Leitores de tela são softwares usados para obter resposta do computador por meio sonoro, usado principalmente por deficientes visuais. O programa vai percorrendo textos e imagens e lendo em voz alta tudo o que ele encontra na tela, assim como as operações que o usuário realiza com as teclas alfanuméricas e os comandos digitados</p>
-                    <p class="link"><a href="content.html?id=4"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="pageMini">
-                    <h3>Atributos Alt</h3>
-                    <p>
-                        Alt text acompanha as imagens presentes no HTML, que é lido em voz alta por leitores de tela, ajudando os usuários com deficiência visual a compreender o conteúdo disponível na página. Ele também aparece na página caso o conteúdo não tenha sido carregado corretamente...                    
-                        <p class="link"><a href="content.html?id=2"><i class="fa-solid fa-arrow-right" title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>Boas práticas para descrição de imagens</h3>
-                    <p>
-                        Na Web, tanto as imagens que transmitem conteúdo quanto as decorativas são inacessíveis a quem navega utilizando recursos de Tecnologia Assistiva, como o leitor de tela, a linha braille, navegadores em que as imagens estão desabilitadas, e navegadores textuais. Assim, uma pessoa cega ou surdocega, por exemplo, perderá toda a informação que é passada visualmente através de imagens...</p>
-                    <p class="link"><a href="content.html?id=11"><i class="fa-solid fa-arrow-right"
-                                title="Acessar Conteúdo"></i></a></p>
-
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-
-                    <h3>ARIA ou WAI-ARIA</h3>
-                    <p>
-                        ARIA está relacionado a acessibilidade. O termo é um acrônimo para Acessible Rich Internet Applications. Ele também é comumente utilizado com o acrônimo WAI de Web Acessibility Initiative, ou WAI-ARIA...</p>
-                    <p class="link"><a href="content.html?id=12"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>Daltonismo</h3>
-                    <p>
-                        Mesmo quem possui a monocromia tem dificuldade de perceber as diferentes variações de luz. Para garantir que haja leitura é importante definir cores que tenham contraste. Um exemplo: um texto em branco em cima de uma cor escura de fundo terá mais contraste que um texto branco em cima de um fundo amarelo...
-                    <p class="link"><a href="content.html?id=5"><i class="fa-solid fa-arrow-right"
-                                title="Acessar Conteúdo"></i></a></p>
-
-                </div>
-            </li>
-        </ul>
-
-        <h2 class="titleSection">Surdez</h2>
-        <ul class="listPage" id="surdez">
-            <li>
-                <div class="pageMini" >
-                    <h3>vLibras</h3>
-                    <p>
-                        O VLibras é uma plataforma de código aberto, livre e gratuita, que traduz automaticamente conteúdos digitais em diversos suportes (textos, áudios e vídeos) para a Língua Brasileira de Sinais (Libras) através de tradução automática e uso de um Avatar 3D, tornando computadores, dispositivos móveis e websites acessíveis para pessoas surdas...</p>
-                    <p class="link"><a href="content.html?id=3"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-
-            <li>
-                <div class="pageMini">
-                    <h3>Legendas</h3>
-                    <p>
-                        As legendas fornecem conteúdo para pessoas surdas e com deficiência auditiva. As legendas são uma versão em texto das informações de áudio de fala e não fala necessárias para entender o conteúdo. Eles são sincronizados com o áudio e geralmente são exibidos em um media player quando os usuários os ligam...                    
-                        <p class="link"><a href="content.html?id=20"><i class="fa-solid fa-arrow-right"title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            
-        </ul>
-
-
-        <h2 class="titleSection" >Dislexia</h2>
-        <ul class="listPage" id="surdez">
-            <li>
-                <div class="pageMini">
-                    <h3>Fontes para pessoas com dislexia</h3>
-                    <p>
-                        A dislexia é uma condição genética que dificulta o processo de leitura e escrita. A pessoa com dislexia pode trocar letras, especialmente as que possuem grafia parecida (como d/b, p/b ou j/i), pular ou inverter sílabas na hora de escrever, confundir palavras que têm sons semelhantes...                    
-                        <p class="link"><a href="content.html?id=9"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>Tipos de fonte e acessibilidade digital</h3>
-                    <p>
-                        É muito comum falar em descrição de imagens, legenda para vídeos e suporte para teclado quando o assunto é acessibilidade digital. No entanto, uma questão igualmente importante para a acessibilidade é a escolha da fonte. Mas quais tipos de fonte são mais indicados? E que fatores tornam uma fonte mais ou menos acessível...   
-                    </p>
-                    <p class="link"><a href="content.html?id=5"><i class="fa-solid fa-arrow-right"
-                                title="Acessar Conteúdo"></i></a></p>
-
-                </div>
-            </li>
-            
-        </ul>
-
-
+</div>
 
     </main>
 
@@ -231,7 +92,20 @@
             </ul>
         </div>
     </footer>
+    <script src="./script/document/changeLoginButton.js"></script>
+    <script src="./script/document/domIndex.js"></script>
+    <script src="./script/document/domSearch.js"></script>
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>

@@ -11,7 +11,9 @@
     <link href="style/details.css" rel="stylesheet">
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
-    <link href="style/forum.css" rel="stylesheet">
+    <link href="style/forum.css" rel="stylesheet">    
+    <link href="style/login.css" rel="stylesheet">
+
 
 
 
@@ -24,6 +26,7 @@
     <script src="./script/httpClient.js"></script>
     <script src="./script/isLogin.js"></script>
     <script src="./script/service/forumPosts.service.js"></script>
+
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +64,7 @@
             <a href="content.html">Docs</a>
             <a href="forum.html">Fórum</a>
             <a href="cadastro.html">Cadastre-se</a>
-            <a href="login.html"><button>Login</button></a>
+          <button id="loginClick">Login</button>
 
         </div>
     </header>
@@ -72,16 +75,12 @@
             <h1>Bem Vindo ao Fórum!</h1>
             <div class="user">
             <p>Você está logado como:</p>
-            <b class="username"id="username">Lucas</b>
+            <b class="username"id="username"></b>
             <hr>
             <div class=" userposts" >
                 <h2> Seus posts no fórum:</h2>
                 <div id="postuserlist">
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
-                <a href="forumpost.html>"><div class="userpostcard"><h3>Como faço isso?</h3><i class="fa-solid fa-arrow-right"></i></div></a>
+                Ainda sem posts
                 </div>
             </div>
         </div>
@@ -91,9 +90,23 @@
        
 
         <main>
-            <article class="container" id="main">
+            <div class="container">
                 <h1> Fórum do Acessibilidade for Devs</h1>
-                <p>Perguntas mais recentes:</p>
+                <hr>
+                <h2 style="margin-top: 1rem; text-align: center;">Faça a sua pergunta:</h2>
+                <form  id="postforum" class="login-form">
+                    <label for="titulo">Título</label>
+                    <input type="text" placeholder="usuario@acessibilidade.com.br" id="titulo" required>
+                    <label for="password">Conteúdo</label>
+                    <textarea id="conteudo" required></textarea>
+        
+                    <input type="submit" value="Fazer Pergunta">
+                </form>
+            </div>
+            <article class="container" id="main">
+
+             
+                <h2>Perguntas mais recentes:</h2>
 
                 <div id="listpost" class="listpost">
                
@@ -101,7 +114,22 @@
                 
                 </div>
             </article>
-
+            <footer>
+                <div>
+                    <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
+                    <p> © All rights reserved - FIAP - 2022</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/forum.html">Fórum</a></li>
+                        <li><a href="/content.html">Documentação</a></li>
+                        <li><a href="/cadastro.html">Cadastre-se</a></li>
+                        <li><a href="/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </footer>
+        
     
         </main>
 
@@ -109,22 +137,7 @@
 
     </div>
 
-        <footer>
-        <div>
-            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
-            <p> © All rights reserved - FIAP - 2022</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/forum.html">Fórum</a></li>
-                <li><a href="/content.html">Documentação</a></li>
-                <li><a href="/cadastro.html">Cadastre-se</a></li>
-                <li><a href="/login.html">Login</a></li>
-            </ul>
-        </div>
-    </footer>
-
+    
 
 
     <script src="darkmode.js"></script>
@@ -141,8 +154,12 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+<script>page = "index"</script>
 
     <script src="./script/document/domForum.js"></script>
+    <script src="./script/document/domPost.js"></script>
+    <script src="./script/document/changeLoginButton.js"></script>
+
 </body>
 
 </html>

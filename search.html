@@ -17,6 +17,12 @@
     <link href="style/scroll.css" rel="stylesheet">
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/search.service.js"></script>
+
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
 </head>
@@ -31,16 +37,18 @@
             
         </div>
 
-        <div class="searchbox">
-            <label for="search">
-                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
-         
-                <span class="fa-sr-only">Pesquisar</span>
-            </label>
-            <input id="search"type="search" placeholder="Pesquisar">
-            <input type="submit" value="Pesquisar">
-        </div>
-
+        
+        <form id="searchForm">
+            <div class="searchbox">
+                <label for="search">
+                    <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+             
+                    <span class="fa-sr-only">Pesquisar</span>
+                </label>
+                <input id="search"type="search" placeholder="Pesquisar">
+                <input type="submit" value="Pesquisar">
+            </div>
+            </form>
         <div class="headernav">
         
                 <a href="constrast.html">Ferramenta de Constraste</a>
@@ -55,60 +63,33 @@
 
  
 
-    <main id="main">
+    <main id="main" style="margin:3rem 0">
         <h2 class="titleSection" style="font-size: 2rem;">Resultado de pesquisa (Palavra que pesquisei): </h2>
-        <ul class="listPage">
-            <li>
-                <div class="pageMini">
-                    <h3>Html Semântico</h3>
-                    <p>
-                        Uma boa parte da acessibilidade, trata-se de fazer o uso do HTML semântico na hora do desenvolvimento de front-end.  Além de ter um papel importante em auxiliar os leitores de tela, que são muito utilizados por deficientes visuais, facilitam a manutenção, compreensão do documento, colaborando inclusive no rankeamento de SEO...
-                    </p>
-                    <p class="link"><a href="content.html?id=1"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>O que é Acessibilidade na Web</h3>
-                    <p>
-                       As barreiras também existem na web e afetam milhões de pessoas com deficiência no mundo. Atualmente, estes cidadãos com dificuldades motoras sensoriais ou cognitivas dependem muito dos progressos em termos de acessibilidade web
-                        ...
-                       </p>
-                       <p class="link"><a href="content.html?id=6"><i class="fa-solid fa-arrow-right"title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-                    <h3>Avaliação de acessibilidade em sites</h3>
-                    <p>
-                        Um site acessível é aquele que garante acesso, utilização e compreensão ao maior número possível de usuários, independente de deficiência, limitação ou tecnologia utilizada. Mas, quando o assunto é acessibilidade, a pergunta mais frequente dos profissionais que desenvolvem para a Web é: como saber se meu site é acessível?</p>
-                    <p class="link"><a href="content.html?id=10"><i class="fa-solid fa-arrow-right"
-                                title="Acessar Conteúdo"></i></a></p>
-
-                </div>
-            </li>
-            <li>
-                <div class="pageMini">
-
-                    <h3>Princípios da acessibilidade</h3>
-                    <p>
-                        A informação e os componentes da interface de utilizador têm de ser apresentados de forma a que os utilizadores as possam perceber. Todo conteúdo não textual deve ter uma forma de exibição...    
-                    </p>
-
-                    <p class="link"><a href="content.html?id=7"><i class="fa-solid fa-arrow-right"
-                                title="Acessar conteúdo"></i></a></p>
-                </div>
-            </li>
+        <ul class="listPage" id="searchList" style="margin-top:3rem">
+           <h2>Nenhum resultado</h2>
         </ul>
 
 
     </main>
 
     <footer>
-        <p>2022 FIAP </p>
+        <div>
+            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
+            <p> © All rights reserved - FIAP - 2022</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/forum.html">Fórum</a></li>
+                <li><a href="/content.html">Documentação</a></li>
+                <li><a href="/cadastro.html">Cadastre-se</a></li>
+                <li><a href="/login.html">Login</a></li>
+            </ul>
+        </div>
     </footer>
+    <script src="./script/document/domSearch.js"></script>
+    <script src="./script/document/domSearchPage.js"></script>
+
 
 </body>
 

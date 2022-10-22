@@ -6,12 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style/prism.css" rel="stylesheet" />
 
     <link href="style/contentstyle.css" rel="stylesheet">
     <link href="style/details.css" rel="stylesheet">
     <link href="style/geral.css" rel="stylesheet">
     <link href="style/scroll.css" rel="stylesheet">
 
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/posts.service.js"></script>
 
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
@@ -30,35 +37,6 @@
 
 <body aria-hidden="false" id="body">
     <a href="#main" class="skip-to-main-content-link">Ir para o conteúdo principal </a>
-
-    <header class="headercont">
-        <div class="logo">
-
-
-            <h2 class="fa-sr-only">Acessiblidade for Devs</h1>
-            <a href="index.html"><img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs"></a>
-        </div>
-
-        <div class="searchbox">
-            <label for="search">
-                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
-
-                <span class="fa-sr-only">Pesquisar</span>
-            </label>
-            <input id="search" type="search" placeholder="Pesquisar">
-            <input type="submit" value="Pesquisar">
-        </div>
-
-        <div class="headernav">
-
-            <a href="constrast.html">Ferramenta de Constrate</a>
-            <a href="content.html">Docs</a>
-            <a href="forum.html">Fórum</a>
-            <a href="cadastro.html">Cadastre-se</a>
-            <a href="login.html"><button>Login</button></a>
-
-        </div>
-    </header>
     <div class="darkmode">
         <div>
             <label for="darktoggle">Modo escuro?</label>
@@ -68,6 +46,38 @@
                 title="Ativar menu"></i></label>
         <input id="menutoggle" type="checkbox" style="display:none">
     </div>
+    <header class="headercont">
+        <div class="logo">
+
+
+            <h2 class="fa-sr-only">Acessiblidade for Devs</h1>
+            <a href="index.html"><img src="img/FACUL_Acessibilidade_Logo.png" alt="Logo do Acessibilidade For Devs"></a>
+        </div>
+
+       
+        <form id="searchForm">
+            <div class="searchbox">
+                <label for="search">
+                    <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+             
+                    <span class="fa-sr-only">Pesquisar</span>
+                </label>
+                <input id="search"type="search" placeholder="Pesquisar">
+                <input type="submit" value="Pesquisar">
+            </div>
+            </form>
+
+        <div class="headernav">
+
+            <a href="constrast.html">Ferramenta de Constrate</a>
+            <a href="content.html">Docs</a>
+            <a href="forum.html">Fórum</a>
+            <a href="cadastro.html">Cadastre-se</a>
+           <button id="loginClick">Login</button>
+
+        </div>
+    </header>
+    
     <div class="flexbody">
 
 
@@ -78,86 +88,80 @@
                     <summary>
                         <h3 class="underline">Geral</h3>
                     </summary>
-                    <ul id="geral">
+                    <ul id="Geral">
 
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
                     </ul>
                 </details>
 
                 <details>
                     <summary>
-                        <h3 class="underline">Geral</h3>
+                        <h3 class="underline">Daltonismo</h3>
                     </summary>
-                    <ul id="geral">
+                    <ul id="Daltonismo">
 
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
+                
                     </ul>
                 </details>
 
                 <details>
                     <summary>
-                        <h3 class="underline">Geral</h3>
+                        <h3 class="underline">Cegueira</h3>
                     </summary>
-                    <ul id="geral">
+                    <ul id="Cegueira">
 
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
+                   
                     </ul>
                 </details>
 
                 <details>
                     <summary>
-                        <h3 class="underline">Geral</h3>
+                        <h3 class="underline">Surdez</h3>
                     </summary>
-                    <ul id="geral">
+                    <ul id="Surdez">
 
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
-                        <li><a href="#">Lorem Ipsun</a></li>
+                  
+                    </ul>
+                </details>
+
+                
+                <details>
+                    <summary>
+                        <h3 class="underline">Dislexia</h3>
+                    </summary>
+                    <ul id="Dislexia">
+
+                     
                     </ul>
                 </details>
             </nav>
         </div>
 
-        <section class="aside">
-
-            <details open>
-                <summary>
-                    <h3 class="underline">Tópicos Relacionados</h3>
-                </summary>
-                <ul id="subtitulos-box">
-                    <li><a href="#">Oiii</a></li>
-                    <li><a href="#">Oiii</a></li>
-                    <li><a href="#">Oiii</a></li>
-                    <li><a href="#">Oiii</a></li>
-                    <li><a href="#">Oiii</a></li>
-                </ul>
-            </details>
-        </section>
+     
 
         <main>
             <article class="container" id="main">
-                <h1> Acessibilidade for Devs</h1>
+                <h1 id="titleArticle"> Acessibilidade for Devs</h1>
+                <div id="contentArticle">
                 <p>Acessibilidade for Devs é uma plataforma de documentação para desenvolvimento web focado na acessibilidade</p>
-                <p>Selecione um artigo no menu lateral</p>
+                <p>Selecione um artigo no menu lateral</p></div>
             </article>
+
+
+            <footer>
+                <div>
+                    <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
+                    <p> © All rights reserved - FIAP - 2022</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/forum.html">Fórum</a></li>
+                        <li><a href="/content.html">Documentação</a></li>
+                        <li><a href="/cadastro.html">Cadastre-se</a></li>
+                        <li><a href="/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </footer>
         </main>
 
 
@@ -165,21 +169,8 @@
     </div>
 
 
-    <footer>
-        <div>
-            <img class="logo-footer" src="./img/FACUL_Acessibilidade_LogoPreta.png" alt="Logo Acessibilidade 4 Devs">
-            <p> © All rights reserved - FIAP - 2022</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/forum.html">Fórum</a></li>
-                <li><a href="/content.html">Documentação</a></li>
-                <li><a href="/cadastro.html">Cadastre-se</a></li>
-                <li><a href="/login.html">Login</a></li>
-            </ul>
-        </div>
-    </footer>
+
+
 
 
     <script src="csv.js"></script>
@@ -197,6 +188,13 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
+    <script src="./script/document/changeLoginButton.js"></script>
+    <script src="./script/document/domArticle.js"></script>
+  
+    <script src="prism.js"></script>
+    <script src="./script/document/domSearch.js"></script>
+
 </body>
 
 </html>

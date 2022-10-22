@@ -18,6 +18,12 @@
     <link href="style/login.css" rel="stylesheet">
 
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/getTokenStorage.js"></script>
+    <script src="./script/httpClient.js"></script>
+    <script src="./script/isLogin.js"></script>
+    <script src="./script/service/users.service.js"></script>
+
 
 
     <script src="https://kit.fontawesome.com/d2a51699f1.js" crossorigin="anonymous"></script>
@@ -33,15 +39,17 @@
             
         </div>
 
-        <div class="searchbox">
-            <label for="search">
-                <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
-         
-                <span class="fa-sr-only">Pesquisar</span>
-            </label>
-            <input id="search"type="search" placeholder="Pesquisar">
-            <input type="submit" value="Pesquisar">
-        </div>
+        <form id="searchForm">
+            <div class="searchbox">
+                <label for="search">
+                    <span aria-hidden="true" class="fa-solid fa-magnifying-glass"></span>
+             
+                    <span class="fa-sr-only">Pesquisar</span>
+                </label>
+                <input id="search"type="search" placeholder="Pesquisar">
+                <input type="submit" value="Pesquisar">
+            </div>
+            </form>
 
         <div class="headernav">
         
@@ -49,7 +57,7 @@
                 <a href="content.html">Docs</a>
                 <a href="forum.html">Fórum</a>
                 <a href="cadastro.html">Cadastre-se</a>
-                <a href="login.html"><button>Login</button></a>
+                <button id="loginClick">Login</button>
     
         </div>
     </header>
@@ -57,21 +65,18 @@
 
     <section class="container" id="main">
         <h1>Cadastre-se</h1>
-        <form action="" class="login-form">
+        <form class="login-form" id="cadastro">
             <label for="email">Nome Completo</label>
-            <input type="text" placeholder="João da Silva" name="nome" required>
+            <input type="text" placeholder="João da Silva" name="nome" id="username" required>
 
             <label for="email">Email</label>
-            <input type="text" placeholder="usuario@acessibilidade.com.br" name="email" required>
+            <input type="email" placeholder="usuario@acessibilidade.com.br" name="email" id="email" required>
 
             <label for="senha">Senha</label>
-            <input type="password" placeholder="Digite a senha" name="senha" required>
-
-            <label for="foto">Foto de perfil</label>
-            <input type="file" name="foto" required>
+            <input type="password" placeholder="Digite a senha" name="senha" required id="password">
 
 
-            <button type="submit">Cadastre-se</button>
+            <input type="submit" value="Cadastre-se">
         </form>
         <p>Já possui uma conta? <a href="/login.html">Faça login</a></p>
 
@@ -92,6 +97,21 @@
             </ul>
         </div>
     </footer>
+    <script src="./script/document/domSearch.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="./script/document/changeLoginButton.js"></script>
+    <script src="./script/document/domCadastro.js"></script>
+    <script src="./script/document/domSearch.js"></script>
 
 </body>
 
